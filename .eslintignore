@@ -1,0 +1,14 @@
+/.expo
+node_modules
+.eslintrc.js
+app.json
+/android
+/assets
+/scripts
+eas.json
+metro.config.js
+package-lock.json
+package.json
+README.md
+tsconfig.json
+expo-env.d.ts
