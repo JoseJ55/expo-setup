@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -20,6 +20,14 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
+        <ThemedText>
+          {process.env.EXPO_PUBLIC_TEST_VAR ?? 'failed'} and{' '}
+          {process.env.TEST_VAR ? 'checked' : 'failed'}
+        </ThemedText>
+        <ThemedText>
+          {process.env.SECRET_TEST_VAR ?? 'failed'} and{' '}
+          {process.env.EXPO_PUBLIC_UPDATE_TEST ?? 'update failed'}
+        </ThemedText>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
@@ -28,7 +36,7 @@ export default function HomeScreen() {
             {Platform.select({
               ios: 'cmd + d',
               android: 'cmd + m',
-              web: 'F12'
+              web: 'F12',
             })}
           </ThemedText>{' '}
           to open developer tools.

@@ -13,6 +13,9 @@
       "bundleIdentifier": "com.josej826.exposetup",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     },
     "android": {
@@ -20,7 +23,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.josej826.exposetup"
+      "package": "com.josej826.exposetup",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
@@ -49,6 +53,9 @@
       "eas": {
         "projectId": "25e15052-8553-46b8-8e20-74fd3b9a54e7"
       }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/25e15052-8553-46b8-8e20-74fd3b9a54e7"
     }
   }
 }
